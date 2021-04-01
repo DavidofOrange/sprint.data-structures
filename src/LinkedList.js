@@ -11,11 +11,42 @@ class LinkedList {
     }
   }
 
-  appendToTail(value) {}
+  // Linked list is and object of objects
+  // {head: {next: tail, value: {next: tail, value: 5}}, tail: {next: null, value: 5}}
 
-  removeHead() {}
+  appendToTail(newValue) {
+    //return a node
+    //call function node with a value
 
-  findNode(value) {}
+    if (this.head === undefined) {
+      this.head = new Node(newValue);
+      this.tail = this.head;
+      return this.tail;
+    } else {
+      const newNode = new Node(newValue);
+      this.tail.next = newNode;
+      this.tail = newNode;
+    }
+    return this.tail;
+  }
+
+  removeHead() {
+    let oldHead = this.head;
+    this.head = this.head.next;
+    return oldHead;
+  }
+
+  findNode(value) {
+    let current = this.head;
+
+    while (current.next !== null) {
+      if (current.value === value) {
+        return current;
+      }
+      current = current.next;
+    }
+    return null;
+  }
 
   /*
 +-------------------------+

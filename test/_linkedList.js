@@ -5,7 +5,7 @@ const { isClass } = require("./utilities");
 const LinkedList = require("../src/LinkedList");
 
 let linkedList;
-describe("Linked Lists", () => {
+describe.only("Linked Lists", () => {
   beforeEach(() => {
     linkedList = new LinkedList(5);
   });
@@ -38,7 +38,7 @@ describe("Linked Lists", () => {
     });
   });
 
-  describe("The appendToTail method", () => {
+  describe.only("The appendToTail method", () => {
     it("should exist on the LinkedList prototype", () => {
       expect(LinkedList.prototype.appendToTail).to.exist;
       expect(typeof LinkedList.prototype.appendToTail).to.equal("function");
@@ -66,7 +66,7 @@ describe("Linked Lists", () => {
     });
   });
 
-  describe("The removeHead method", () => {
+  describe.only("The removeHead method", () => {
     it("should exist on the LinkedList prototype", () => {
       expect(LinkedList.prototype.removeHead).to.exist;
       expect(typeof LinkedList.prototype.removeHead).to.equal("function");
@@ -75,6 +75,11 @@ describe("Linked Lists", () => {
     it("should remove current head and replace with node from old head's next property", () => {
       linkedList.appendToTail(3);
       linkedList.appendToTail(4);
+      //linkedList.appendToTail(5);
+      linkedList.appendToTail(6);
+      linkedList.appendToTail(7);
+      linkedList.appendToTail(8);
+      linkedList.appendToTail(9);
 
       const headBeforeRemoval = linkedList.head;
       const headAfterRemoval = headBeforeRemoval.next;
@@ -86,7 +91,7 @@ describe("Linked Lists", () => {
     });
   });
 
-  describe("The findNode method", () => {
+  describe.only("The findNode method", () => {
     it("should exist on the LinkedList prototype", () => {
       expect(LinkedList.prototype.findNode).to.exist;
       expect(typeof LinkedList.prototype.findNode).to.equal("function");
