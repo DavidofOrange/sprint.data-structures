@@ -1,13 +1,74 @@
+const { find } = require("underscore");
+
 class Tree {
   constructor(value) {
     this.value = value;
     this.children = [];
   }
 
-  addChild(value) {}
+  addChild(value) {
+    this.children.push(new Tree(value));
+  }
 
-  contains(value) {}
+  contains(value) {
+    let current = this;
+    let result = false;
+    //console.log(current)
+    //console.log(current.value)
+    //console.log(current.children)
+    /*
+    while (current.children.length !== 0) {
+      if (current.value === value) {
+        return true;
+      }
+      current = current.children[0];
+    }
+    return false;
+    */
+    function findChildren(treeObj) {
+      if (treeObj.value === value) {
+        result = true;
+        return result;
+      }
 
+      if (treeObj.children.length !== 0) {
+        for (let child of treeObj.children) {
+          if (child.value === value) {
+            result = true;
+            return result;
+          }
+          findChildren(child);
+        }
+      }
+    }
+
+    findChildren(current);
+
+    /*
+    for (let child in current) {
+      if (child.value === value) {
+        return true}
+      }
+    }
+    */
+
+    /*
+    function recursiveElement(elemToCheck) {
+      // if this elemToCheck has [targetClass] push to result
+      for (const element of elemToCheck) {
+        if (current.value === value) {
+          return true;
+        }
+        if (element.Children !== 0) {
+          recursiveElement(element.children);
+        }
+        else return false
+      }
+    }
+
+    recursiveElement(current)
+    */
+  }
   /*
 +-------------------------+
 | Advanced Requirements!! |
@@ -31,3 +92,5 @@ requirements for ALL data structures in this exercise.
 |X                               X
 |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 */
+
+module.exports = Tree;

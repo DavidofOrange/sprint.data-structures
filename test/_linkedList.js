@@ -5,7 +5,7 @@ const { isClass } = require("./utilities");
 const LinkedList = require("../src/LinkedList");
 
 let linkedList;
-describe.only("Linked Lists", () => {
+describe("Linked Lists", () => {
   beforeEach(() => {
     linkedList = new LinkedList(5);
   });
@@ -37,8 +37,7 @@ describe.only("Linked Lists", () => {
       expect(linkedList.head).to.deep.equal(linkedList.tail);
     });
   });
-
-  describe.only("The appendToTail method", () => {
+  describe("The appendToTail method", () => {
     it("should exist on the LinkedList prototype", () => {
       expect(LinkedList.prototype.appendToTail).to.exist;
       expect(typeof LinkedList.prototype.appendToTail).to.equal("function");
@@ -66,7 +65,7 @@ describe.only("Linked Lists", () => {
     });
   });
 
-  describe.only("The removeHead method", () => {
+  describe("The removeHead method", () => {
     it("should exist on the LinkedList prototype", () => {
       expect(LinkedList.prototype.removeHead).to.exist;
       expect(typeof LinkedList.prototype.removeHead).to.equal("function");
@@ -91,7 +90,7 @@ describe.only("Linked Lists", () => {
     });
   });
 
-  describe.only("The findNode method", () => {
+  describe("The findNode method", () => {
     it("should exist on the LinkedList prototype", () => {
       expect(LinkedList.prototype.findNode).to.exist;
       expect(typeof LinkedList.prototype.findNode).to.equal("function");
