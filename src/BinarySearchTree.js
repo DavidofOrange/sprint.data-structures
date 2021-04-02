@@ -5,7 +5,7 @@ class BinarySearchTree {
     this.right = undefined;
   }
 
-  /*
+  /* First Idea, While Loop. We were not able to make this one work.7
     insert(value) {
      // make a new BinarySearchTree
      // check value against value of root
@@ -31,6 +31,7 @@ class BinarySearchTree {
     }
     */
 
+  // Second Idea, Recursion. This one works.
   insert(value, startingPoint) {
     // make a new BinarySearchTree
     // check value against value of root
@@ -84,14 +85,6 @@ class BinarySearchTree {
 /*
 
 
-    while (current.next !== null) {
-      if (current.value === value) {
-        return current;
-      }
-      current = current.next;
-    }
-
-
 |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 |X                               X
 |X   Basic Requirements:         X
@@ -99,8 +92,8 @@ class BinarySearchTree {
 |X   of the above functions?     X
 |X                               X
 |X  insert: Linear               X
-|X  contains: Linear             X
-|X  traverse: Linear             X
+|X  contains: Logarithmic        X
+|X  traverse: Logarithmic        X
 |X                               X
 |X                               X
 |X                               X

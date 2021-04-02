@@ -16,6 +16,7 @@ class Tree {
     //console.log(current)
     //console.log(current.value)
     //console.log(current.children)
+
     /*
     while (current.children.length !== 0) {
       if (current.value === value) {
@@ -49,23 +50,6 @@ class Tree {
         return true}
       }
     }
-    */
-
-    /*
-    function recursiveElement(elemToCheck) {
-      // if this elemToCheck has [targetClass] push to result
-      for (const element of elemToCheck) {
-        if (current.value === value) {
-          return true;
-        }
-        if (element.Children !== 0) {
-          recursiveElement(element.children);
-        }
-        else return false
-      }
-    }
-
-    recursiveElement(current)
     */
   }
   /*
