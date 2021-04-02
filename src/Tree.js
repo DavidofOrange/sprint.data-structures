@@ -36,14 +36,13 @@ class Tree {
           if (child.value === value) {
             result = true;
             return result;
-          }
-          findChildren(child);
+          } else findChildren(child);
         }
       }
     }
 
     findChildren(current);
-
+    return result;
     /*
     for (let child in current) {
       if (child.value === value) {
