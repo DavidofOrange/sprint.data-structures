@@ -8,7 +8,7 @@ const { isClass } = require("./utilities");
 let tree;
 let anotherTree;
 let fullBST;
-describe.only("The Binary Search Tree", () => {
+describe("The Binary Search Tree", () => {
   beforeEach(() => {
     tree = new BinarySearchTree(1);
 
@@ -32,13 +32,13 @@ describe.only("The Binary Search Tree", () => {
     fullBST.insert(13);
   });
 
-  describe.only("The Binary Search Tree constructor", () => {
+  describe("The Binary Search Tree constructor", () => {
     it("should be an ES6 class", () => {
       expect(isClass(BinarySearchTree)).to.be.true;
     });
   });
 
-  describe.only("The insert method", () => {
+  describe("The insert method", () => {
     it("should exist on the Tree prototype", () => {
       expect(BinarySearchTree.prototype.insert).to.exist;
       expect(typeof BinarySearchTree.prototype.insert).to.equal("function");
@@ -79,7 +79,7 @@ describe.only("The Binary Search Tree", () => {
     });
   });
 
-  describe.only("The contains method", () => {
+  describe("The contains method", () => {
     it("should exist on the Tree prototype", () => {
       expect(BinarySearchTree.prototype.contains).to.exist;
       expect(typeof BinarySearchTree.prototype.contains).to.equal("function");

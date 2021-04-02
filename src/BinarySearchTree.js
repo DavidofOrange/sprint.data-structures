@@ -53,8 +53,34 @@ class BinarySearchTree {
     }
     return rootTree;
   }
-}
 
+  contains(value) {
+    let currentTree = this;
+
+    while (currentTree) {
+      if (value === currentTree.value) {
+        return true;
+      }
+
+      if (value < currentTree.value) {
+        currentTree = currentTree.left;
+      } else if (value > currentTree.value) {
+        currentTree = currentTree.right;
+      }
+    }
+    return false;
+  }
+
+  traverseDepthFirstInOrder(callback) {
+    if (this.left !== undefined) {
+      this.left.traverseDepthFirstInOrder(callback);
+    }
+    callback(this);
+    if (this.right !== undefined) {
+      this.right.traverseDepthFirstInOrder(callback);
+    }
+  }
+}
 /*
 
 
