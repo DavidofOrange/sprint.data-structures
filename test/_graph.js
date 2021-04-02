@@ -5,7 +5,7 @@ const { isClass } = require("./utilities");
 const Graph = require("../src/Graph");
 
 let graph;
-describe("Graphs", () => {
+describe.only("Graphs", () => {
   beforeEach(() => {
     graph = new Graph();
   });
@@ -21,7 +21,7 @@ describe("Graphs", () => {
     });
   });
 
-  describe("The addNode method", () => {
+  describe.only("The addNode method", () => {
     it("should exist on the Graph prototype", () => {
       expect(Graph.prototype.addNode).to.exist;
     });

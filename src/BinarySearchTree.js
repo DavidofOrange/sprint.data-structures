@@ -98,6 +98,12 @@ class BinarySearchTree {
 |X   What is the time complexity X
 |X   of the above functions?     X
 |X                               X
+|X  insert: Linear               X
+|X  contains: Linear             X
+|X  traverse: Linear             X
+|X                               X
+|X                               X
+|X                               X
 |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 */
 

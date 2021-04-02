@@ -7,6 +7,8 @@ class Graph {
      */
     this.nodes = {}; // Adjacency List
   }
+
+  addNode() {}
 }
 
 /*
@@ -17,3 +19,5 @@ class Graph {
 |X                               X
 |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 */
+
+module.exports = Graph;

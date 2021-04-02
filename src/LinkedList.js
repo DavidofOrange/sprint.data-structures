@@ -78,5 +78,11 @@ module.exports = LinkedList;
 |X   What is the time complexity X
 |X   of the above functions?     X
 |X                               X
+|X  appendToTail: constant       X
+|X  removeHead: constant         X
+|X  findNode: Linear             X
+|X                               X
+|X                               X
+|X                               X
 |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 */

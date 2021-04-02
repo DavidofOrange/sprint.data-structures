@@ -86,8 +86,15 @@ requirements for ALL data structures in this exercise.
 /*
 |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 |X                               X
+|X   Basic Requirements:         X
 |X   What is the time complexity X
 |X   of the above functions?     X
+|X                               X
+|X  addChild: constant           X
+|X  contains: Linear             X
+|X                               X
+|X                               X
+|X                               X
 |X                               X
 |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 */
