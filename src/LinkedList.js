@@ -29,7 +29,7 @@ class LinkedList {
     }
     return this.tail;
   }
-
+  //this.tail
   removeHead() {
     let oldHead = this.head;
     this.head = this.head.next;

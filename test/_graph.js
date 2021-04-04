@@ -5,7 +5,7 @@ const { isClass } = require("./utilities");
 const Graph = require("../src/Graph");
 
 let graph;
-describe.only("Graphs", () => {
+describe("Graphs", () => {
   beforeEach(() => {
     graph = new Graph();
   });
@@ -21,7 +21,7 @@ describe.only("Graphs", () => {
     });
   });
 
-  describe.only("The addNode method", () => {
+  describe("The addNode method", () => {
     it("should exist on the Graph prototype", () => {
       expect(Graph.prototype.addNode).to.exist;
     });
@@ -45,7 +45,7 @@ describe.only("Graphs", () => {
     });
   });
 
-  describe.only("The removeNode method", () => {
+  describe("The removeNode method", () => {
     it("should exist on the Graph prototype", () => {
       expect(Graph.prototype.removeNode).to.exist;
     });
@@ -61,7 +61,7 @@ describe.only("Graphs", () => {
       expect(graph.nodes[5]).to.be.undefined;
     });
 
-    xit("should remove edges from all other nodes to referenced node", () => {
+    it("should remove edges from all other nodes to referenced node", () => {
       graph.addNode(5);
       graph.addNode(3);
       graph.addNode(6);
@@ -72,7 +72,7 @@ describe.only("Graphs", () => {
     });
   });
 
-  describe.only("The contains method", () => {
+  describe("The contains method", () => {
     it("should exist on the Graph prototype", () => {
       expect(Graph.prototype.contains).to.exist;
     });
@@ -86,7 +86,7 @@ describe.only("Graphs", () => {
     });
   });
 
-  describe.only("The addEdge method", () => {
+  describe("The addEdge method", () => {
     it("should exist on the Graph prototype", () => {
       expect(Graph.prototype.addEdge).to.exist;
     });
