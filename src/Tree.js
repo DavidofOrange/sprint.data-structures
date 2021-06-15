@@ -13,10 +13,7 @@ class Tree {
   contains(value) {
     let current = this;
     let result = false;
-    //console.log(current)
-    //console.log(current.value)
-    //console.log(current.children)
-
+ 
     /*
     while (current.children.length !== 0) {
       if (current.value === value) {
